@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <style>
+    .row {
+      margin-bottom: 1em;
+    }
+
+    .progress {
+      height: 1.5rem;
+      margin: 1.5rem 0;
+      position: relative;
+    }
+
+    .progress-bar {
+      position: relative;
+      z-index: 10;
+    }
+
+    .skill {
+      position: absolute;
+      left: 5px;
+      top: 0.25rem;
+      color: #fff;
+      z-index: 20;
+    }
+
+    .percentage {
+      position: absolute;
+      right: 5px;
+      top: 0.25rem;
+      opacity: 0;
+      transition: all .5s linear;
+    }
+
+    .percentage.show {
+      opacity: 1;
+    }
+
+    .bg-sass {
+      background-color: #cc669a !important;
+    }
+  </style>
+  <title>Progress Bar</title>
+</head>
+
+<body>
+  <div class='container'>
+    <h2>Skillset Progress bar - with Bootstrap and jQuery</h2>
+
+    <div class="progress">
+      <p class="skill">HTML-5</p>
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+        aria-valuemax="100">
+        <span class="percentage">95%</span>
+      </div>
+    </div>
+
+    <div class="progress">
+      <p class="skill">CSS3</p>
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+        aria-valuemax="100">
+        <span class="percentage">85%</span>
+      </div>
+    </div>
+
+    <div class="progress">
+        <p class="skill">SASS</p>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-sass" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+          aria-valuemax="100">
+          <span class="percentage">95%</span>
+        </div>
+      </div>
+
+    <div class="progress">
+      <p class="skill">Javascript</p>
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0"
+        aria-valuemax="100">
+        <span class="percentage">75%</span>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- End of UI -->
+
+  <!-- JS Reference -->
+
+  <!-- External Libraries -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+
+
+  <!-- Application Modules -->
+  <script src="_progressBarModule.js"></script>
+
+  <!-- Expose JSPublic API -->
+  <script type='text/javascript'>
+    _ProgressBarModule.init();
+  </script>
+</body>
+
+</html>
